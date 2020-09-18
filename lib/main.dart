@@ -19,17 +19,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<String> questions = [
-    'what\'s your favourite car',
-    'what\'s your name',
-    'what\'s your girlfriend name',
-    'who is paul graham',
-    'who is aliko dangote',
-    'who is jessica liviston',
-    'who is micheal seibel',
-    'my name is shedrack abel nicholas'
-  ];
-
   int _questionsIndex = 0;
 
   void _answerQuestion() {
@@ -45,6 +34,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> questions = [
+      'what\'s your favourite car',
+      'what\'s your name',
+      'what\'s your girlfriend name',
+      'who is paul graham',
+      'who is aliko dangote',
+      'who is jessica liviston',
+      'who is micheal seibel',
+      'my name is shedrack abel nicholas'
+    ];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepPurpleAccent,
