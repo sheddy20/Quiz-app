@@ -27,33 +27,45 @@ class _HomeState extends State<Home> {
     ];
     return Scaffold(
       appBar: AppBar(
-        title: Text('Calculator'),
+        title: Text('Flutter state management'),
         backgroundColor: Colors.deepPurpleAccent,
       ),
       body: Center(
         child: Column(
           children: [
-            Text('Celebrities'),
+            Text(
+              'Celebrities',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1.4,
+              ),
+            ),
             Container(
-              child: Column(
-                children: [
-                  Text(
-                    _celebrity[_celebrityList],
-                    style: TextStyle(
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      _celebrity[_celebrityList],
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    MaterialButton(
+                      onPressed: _celebrityFunctions,
+                      child: Text('Check Celebrity'),
                       color: Colors.white,
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
+                      textColor: Colors.black,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50.0),
+                      ),
                     ),
-                  ),
-                  MaterialButton(
-                    onPressed: _celebrityFunctions,
-                    color: Colors.white,
-                    textColor: Colors.black,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50.0),
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20.0),
@@ -61,8 +73,8 @@ class _HomeState extends State<Home> {
               ),
               padding: EdgeInsets.all(20.0),
               margin: EdgeInsets.all(20.0),
-              width: 100.0,
-              height: 300.0,
+              width: 300.0,
+              height: 600.0,
             ),
           ],
         ),
