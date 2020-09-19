@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    List<String> questions = [
+    List<String> _questions = [
       'what\'s your favourite car',
       'what\'s your name',
       'what\'s your girlfriend name',
@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         children: [
           Text(
-            questions[_questionsIndex],
+            _questions[_questionsIndex],
             style: TextStyle(
               color: Colors.black,
               fontSize: 20.0,
