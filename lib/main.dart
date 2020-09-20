@@ -38,12 +38,13 @@ class _MyHomePageState extends State<MyHomePage> {
     List<String> _questions = [
       'what\'s your favourite car',
       'what\'s your name',
-      'what\'s your girlfriend name',
+      'what\'s your last name',
       'who is paul graham',
       'who is aliko dangote',
       'who is jessica liviston',
       'who is micheal seibel',
-      'my name is shedrack abel nicholas'
+      'who is drew houston',
+      'who is arash ferdowsi'
     ];
     return Scaffold(
       appBar: AppBar(
