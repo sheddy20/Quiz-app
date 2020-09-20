@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz/Dash.dart';
 import 'package:quiz/question.dart';
 
 void main() => runApp(MyApp());
@@ -89,7 +90,13 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           RaisedButton(
             child: Text('Answer 2'),
-            onPressed: null,
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => Dash(),
+                ),
+              );
+            },
             textColor: Colors.white,
             color: Colors.black,
           ),
