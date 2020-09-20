@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/Dash.dart';
 import 'package:quiz/question.dart';
 
 void main() => runApp(MyApp());
@@ -67,36 +66,18 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: [
-          Text(
+          Question(
             _questions[_questionsIndex],
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1.5,
-            ),
           ),
           RaisedButton(
             child: Text('Answer 1'),
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => Home(),
-                ),
-              );
-            },
+            onPressed: () {},
             textColor: Colors.white,
             color: Colors.black,
           ),
           RaisedButton(
             child: Text('Answer 2'),
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => Dash(),
-                ),
-              );
-            },
+            onPressed: () {},
             textColor: Colors.white,
             color: Colors.black,
           ),
