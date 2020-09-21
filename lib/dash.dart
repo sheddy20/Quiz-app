@@ -51,7 +51,11 @@ class _DashState extends State<Dash> {
             RaisedButton(
               onPressed: _changeState,
               color: Colors.black,
-              textColor: Colors.black,
+              textColor: Colors.white,
+              child: Text('Start Quiz'),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
             ),
           ],
         ),

@@ -53,16 +53,16 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Quizzer'),
         leading: IconButton(
           icon: Icon(_icon),
-          onPressed: _answerQuestion,
+          onPressed: () {},
         ),
         actions: [
           IconButton(
             icon: Icon(_icon2),
-            onPressed: _answerQuestion,
+            onPressed: () {},
           ),
           IconButton(
             icon: Icon(_icon3),
-            onPressed: _answerQuestion,
+            onPressed: () {},
           ),
         ],
       ),
@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           RaisedButton(
             child: Text('Answer 2'),
-            onPressed: () {},
+            onPressed: _answerQuestion,
             textColor: Colors.white,
             color: Colors.black,
           ),
