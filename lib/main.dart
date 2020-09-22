@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/dash.dart';
+import 'package:quiz/Home.dart';
+import 'package:quiz/Quiz.dart';
+import 'package:quiz/answer.dart';
 import 'package:quiz/question.dart';
 
 void main() => runApp(MyApp());
@@ -45,55 +47,167 @@ class _MyHomePageState extends State<MyHomePage> {
       'who is jessica liviston',
       'who is micheal seibel',
       'who is drew houston',
-      'who is arash ferdowsi'
+      'who is arash ferdowsi',
     ];
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurpleAccent,
+        backgroundColor: Colors.deepPurpleAccent[400],
         title: Text('Quizzer'),
-        leading: IconButton(
-          icon: Icon(_icon),
-          onPressed: () {},
-        ),
         actions: [
           IconButton(
-            icon: Icon(_icon2),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(_icon3),
-            onPressed: () {},
+            onPressed: _answerQuestion,
+            icon: Icon(Icons.school),
           ),
         ],
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Question(
             _questions[_questionsIndex],
           ),
-          RaisedButton(
-            child: Text('Answer 1'),
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => Dash()),
-              );
-            },
-            textColor: Colors.white,
-            color: Colors.black,
-          ),
-          RaisedButton(
-            child: Text('Answer 2'),
-            onPressed: _answerQuestion,
-            textColor: Colors.white,
-            color: Colors.black,
-          ),
-          RaisedButton(
-            child: Text('Answer 3'),
-            onPressed: null,
-            textColor: Colors.white,
-            color: Colors.black,
-          ),
+          Answer(),
+          Answer(),
+          Answer(),
+          SizedBox(height: 70.0),
+          Home(),
         ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.all(0.0),
+          children: [
+            UserAccountsDrawerHeader(
+              accountEmail: Text('Abelshedrack@gmail.com'),
+              accountName: Text('Abel shedrack Nicholas'),
+              currentAccountPicture: CircleAvatar(
+                radius: 50.0,
+                backgroundColor: Colors.white,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.deepPurpleAccent[400],
+                borderRadius: BorderRadius.circular(19.0),
+              ),
+            ),
+            ListTile(
+              leading: Card(
+                child: FlutterLogo(),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+              onTap: () {},
+              title: Text('My Flutter Quiz'),
+              trailing: Icon(Icons.school),
+              subtitle: Text('Quizzer'),
+            ),
+            Divider(
+              color: Colors.black,
+            ),
+            ListTile(
+              leading: Card(
+                child: FlutterLogo(),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+              onTap: () {},
+              title: Text('My Flutter Quiz'),
+              trailing: Icon(Icons.school),
+              subtitle: Text('Quizzer'),
+            ),
+            Divider(
+              color: Colors.black,
+            ),
+            ListTile(
+              leading: Card(
+                child: FlutterLogo(),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+              onTap: () {},
+              title: Text('My Flutter Quiz'),
+              trailing: Icon(Icons.school),
+              subtitle: Text('Quizzer'),
+            ),
+            Divider(
+              color: Colors.black,
+            ),
+            ListTile(
+              leading: Card(
+                child: FlutterLogo(),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+              onTap: () {},
+              title: Text('My Flutter Quiz'),
+              trailing: Icon(Icons.school),
+              subtitle: Text('Quizzer'),
+            ),
+            Divider(
+              color: Colors.black,
+            ),
+            ListTile(
+              leading: Card(
+                child: FlutterLogo(),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+              onTap: () {},
+              title: Text('My Flutter Quiz'),
+              trailing: Icon(Icons.school),
+              subtitle: Text('Quizzer'),
+            ),
+            Divider(
+              color: Colors.black,
+            ),
+            ListTile(
+              leading: Card(
+                child: FlutterLogo(),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+              onTap: () {},
+              title: Text('My Flutter Quiz'),
+              trailing: Icon(Icons.school),
+              subtitle: Text('Quizzer'),
+            ),
+            Divider(
+              color: Colors.black,
+            ),
+            ListTile(
+              leading: Card(
+                child: FlutterLogo(),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+              onTap: () {},
+              title: Text('My Flutter Quiz'),
+              trailing: Icon(Icons.school),
+              subtitle: Text('Quizzer'),
+            ),
+            Divider(
+              color: Colors.black,
+            ),
+            ListTile(
+              leading: Card(
+                child: FlutterLogo(),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+              onTap: () {},
+              title: Text('My Flutter Quiz'),
+              trailing: Icon(Icons.school),
+              subtitle: Text('Quizzer'),
+            ),
+          ],
+        ),
       ),
     );
   }
