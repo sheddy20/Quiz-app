@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/Home.dart';
 import 'package:quiz/answer.dart';
 import 'package:quiz/question.dart';
+import 'package:quiz/word.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,12 +28,12 @@ class _MyHomePageState extends State<MyHomePage> {
     print('Answer Chosen');
     setState(() {
       _questionsIndex++;
+      if (_questionsIndex > 8) {
+        _questionsIndex++;
+        return Text('Sorry');
+      }
     });
   }
-
-  final _icon = Icons.menu;
-  final _icon2 = Icons.search;
-  final _icon3 = Icons.more_vert;
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Quizzer'),
         actions: [
           IconButton(
-            onPressed: _answerQuestion,
+            onPressed: () {},
             icon: Icon(Icons.school),
           ),
         ],
@@ -65,11 +65,11 @@ class _MyHomePageState extends State<MyHomePage> {
           Question(
             _questions[_questionsIndex],
           ),
-          Answer(),
-          Answer(),
-          Answer(),
-          SizedBox(height: 70.0),
-          Home(),
+          Answer(_answerQuestion),
+          Answer(_answerQuestion),
+          Answer(_answerQuestion),
+          SizedBox(height: 20.0),
+          Word(),
         ],
       ),
       drawer: Drawer(
