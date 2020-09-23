@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
-  final Function select;
-  Home(this.select);
+class Reset extends StatelessWidget {
+  final Function makeCount;
+  Reset(this.makeCount);
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
           child: FloatingActionButton.extended(
-            onPressed: select,
+            onPressed: makeCount,
             icon: Icon(Icons.school),
             backgroundColor: Colors.pinkAccent[200],
-            label: Text('Quiz App Counter'),
+            label: Text('Reset Quiz App Counter'),
           ),
         ),
       ],

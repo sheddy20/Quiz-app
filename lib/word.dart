@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz/Home.dart';
+import 'package:quiz/reset.dart';
 
 class Word extends StatefulWidget {
   @override
@@ -12,6 +13,12 @@ class _WordState extends State<Word> {
   void _startWordFun() {
     setState(() {
       _startWord++;
+    });
+  }
+
+  void _resetButton() {
+    setState(() {
+      _startWord--;
     });
   }
 
@@ -46,6 +53,8 @@ class _WordState extends State<Word> {
         ),
         SizedBox(height: 20.0),
         Home(_startWordFun),
+        SizedBox(height: 20.0),
+        Reset(_resetButton),
       ],
     );
   }
