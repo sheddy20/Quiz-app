@@ -104,12 +104,11 @@ class _MyHomePageState extends State<MyHomePage> {
               accountEmail: Text('Abelshedrack@gmail.com'),
               accountName: Text('Abel shedrack Nicholas'),
               currentAccountPicture: CircleAvatar(
-                radius: 50.0,
-                backgroundColor: Colors.white,
+                backgroundImage: AssetImage('Assets/Images/shedrack.jpg'),
               ),
               decoration: BoxDecoration(
                 color: Colors.deepPurpleAccent[400],
-                borderRadius: BorderRadius.circular(19.0),
+                borderRadius: BorderRadius.circular(11.0),
               ),
             ),
             ListTile(
@@ -186,48 +185,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Divider(
               color: Colors.black,
-            ),
-            ListTile(
-              leading: Card(
-                child: FlutterLogo(),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-              ),
-              onTap: () {},
-              title: Text('My Flutter Quiz'),
-              trailing: Icon(Icons.school),
-              subtitle: Text('Quizzer'),
-            ),
-            Divider(
-              color: Colors.black,
-            ),
-            ListTile(
-              leading: Card(
-                child: FlutterLogo(),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-              ),
-              onTap: () {},
-              title: Text('My Flutter Quiz'),
-              trailing: Icon(Icons.school),
-              subtitle: Text('Quizzer'),
-            ),
-            Divider(
-              color: Colors.black,
-            ),
-            ListTile(
-              leading: Card(
-                child: FlutterLogo(),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-              ),
-              onTap: () {},
-              title: Text('My Flutter Quiz'),
-              trailing: Icon(Icons.school),
-              subtitle: Text('Quizzer'),
             ),
           ],
         ),
