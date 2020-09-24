@@ -37,16 +37,39 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    List<String> _questions = [
-      'what\'s your favourite car',
-      'what\'s your name',
-      'what\'s your last name',
-      'who is paul graham',
-      'who is aliko dangote',
-      'who is jessica liviston',
-      'who is micheal seibel',
-      'who is drew houston',
-      'who is arash ferdowsi',
+    List<Map<String, Object>> questions = [
+      {
+        'questionText': 'What\s Your Country Name',
+        'answer': ['Nigeria', 'United State', 'United Kingdom', 'UAE', 'Sweden']
+      },
+      {
+        'questionText': 'What\s Your Favourite Car',
+        'answer': ['Bugatti', 'Lamborghini', 'Ferrari', 'Tesla', 'Lucid Air']
+      },
+      {
+        'questionText': 'Who Betray Jesus Christ',
+        'answer': ['Shalom', 'Obassi', 'JUDAS', 'Jefferson', 'Honour']
+      },
+      {
+        'questionText': 'Who Create The World Wide Web[WWW]',
+        'answer': ['Tim Bener Lee', 'Larry Page', 'Mark Zuckerberg', 'Shedrack']
+      },
+      {
+        'questionText': 'What\s The Capital Of Sweden',
+        'answer': ['Abuja', 'Copahagen', 'Stockholm', 'Oslo', 'Beijing']
+      },
+      {
+        'questionText': 'Who Is Lashmi Mittal',
+        'answer': ['A Billionaire', 'A Hacker', 'Cook', 'Doctor', 'Criminal']
+      },
+      {
+        'questionText': 'Which Of This Country Speak Mandarin',
+        'answer': ['China', 'Japan', 'South Korea', 'Rwanda', 'Barbardos']
+      },
+      {
+        'questionText': 'What\s The Alter Ego Of Superman',
+        'answer': ['Clark Kent', 'David', 'Shalom', 'Jefferson', 'Honour']
+      },
     ];
     return Scaffold(
       appBar: AppBar(
@@ -63,11 +86,12 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Question(
-            _questions[_questionsIndex],
+            questions[_questionsIndex]['questionText'],
           ),
-          Answer(_answerQuestion),
-          Answer(_answerQuestion),
-          Answer(_answerQuestion),
+          ...(questions[_questionsIndex]['answer'] as List<String>)
+              .map((answer) {
+            return Answer(_answerQuestion, answer);
+          }).toList(),
           SizedBox(height: 20.0),
           Word(),
         ],
